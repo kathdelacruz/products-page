@@ -1,0 +1,100 @@
+<div class="sticky">
+  <div class="container">
+    <%= link_to refinery.root_path do %>
+      <%= image_tag "ifurniture-logo.png", :class => "logo" %>
+    <% end %>
+    <div class="right">
+      <ul class="language" id='locale'>
+        <% Refinery::I18n.frontend_locales.each do |frontend_locale| %>
+            <li>
+              <%= link_to Refinery::I18n.locales[frontend_locale], refinery.url_for(:locale => frontend_locale) %>
+            </li>
+        <% end %>
+      </ul>
+      <nav>
+        <button class="button-responsive" id="open"><i class="fa fa-bars"></i></button>
+        <ul id="navigation-menu">
+          <% if locale.to_s == "es" %>
+            <%= link_to_in_li "Inicio", '/' %>
+            <li class="collection"><a>Colección<i class="fa fa-sort-desc"></i></a>
+              <ul id="collection">
+                <%= link_to_in_li "iLamp", '/ilamp' %>
+                <%= link_to_in_li "iKids", '/ikids' %>
+                <%= link_to_in_li "iCoworking", '/icoworking' %>
+                <%= link_to_in_li "iHome", '/ihome' %>
+                <%= link_to_in_li "iBaby", '/ibaby' %>
+                <%= link_to_in_li "iChristmas", '/ichristmas' %>
+              </ul>
+            </li>
+            <%= link_to_in_li "Cómo comprar", '#process' %>
+            <%= link_to_in_li "Blog", '/blog' %>
+            <li><button class="suscribe">Suscribirse</button></li>
+          <% else locale.to_s == "en" %>
+            <%= link_to_in_li "Home", '/' + locale.to_s  %>
+            <li class="collection"><a>Colections<i class="fa fa-sort-desc"></i></a>
+              <ul id="collection">
+                <%= link_to_in_li "iLamp", '/' + locale.to_s + '/ilamp' %>
+                <%= link_to_in_li "iKids", '/' + locale.to_s + '/ikids' %>
+                <%= link_to_in_li "iCoworking", '/' + locale.to_s + '/icoworking' %>
+                <%= link_to_in_li "iHome", '/' + locale.to_s + '/ihome' %>
+                <%= link_to_in_li "iBaby", '/' + locale.to_s + '/ibaby' %>
+                <%= link_to_in_li "iChristmas", '/' + locale.to_s + '/ichristmas' %>
+              </ul>
+            </li>
+            <%= link_to_in_li "How to buy", '/' + locale.to_s + '#process'  %>
+            <%= link_to_in_li "Blog", '/' + locale.to_s + '/blog'  %>
+            <li><button class="suscribe">Subscribe</button></li>
+          <% end %>
+        </ul>
+        <div class="header-register">
+          <div class="dropdown-caret">
+            <div class="caret-outer"></div>
+            <div class="caret-inner"></div>
+          </div>
+          <%= form_tag '/suscribir', target: "_top" do %>
+            <%= hidden_field_tag :group_name, 'suscriptores' %>
+            <%= hidden_field_tag :group, 'newsletter' %>
+            <%= text_field_tag :email, nil, type: "email", placeholder: "Email", pattern: "[a-z0-9n._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$", required: true %>
+            <% if locale.to_s == "es" %>
+            <%= submit_tag "Bienvenido a iFurniture" %>
+            <% else %>
+            <%= submit_tag "Welcome to iFurniture" %>
+            <% end %>
+          <% end %>
+        </div>
+      </nav>
+    </div>
+  </div>
+</div>
+<nav class="nav-responsive">
+  <button class="button-responsive" id="exit"><i class="fa fa-times"></i></button>
+  <ul id="navigation-menu">
+    <% if locale.to_s == "es" %>
+      <%= link_to_in_li "Inicio", '/' %>
+      <li class="collection"><a>Colección<i class="fa fa-sort-desc"></i></a>
+        <ul id="collection-responsive">
+          <%= link_to_in_li "iLamp", '/ilamp' %>
+          <%= link_to_in_li "iKids", '/ikids' %>
+          <%= link_to_in_li "iCoworking", '/icoworking' %>
+          <%= link_to_in_li "iHome", '/ihome' %>
+          <%= link_to_in_li "iBaby", '/ibaby' %>
+          <%= link_to_in_li "iChristmas", '/ichristmas' %>
+        </ul>
+      </li>
+      <%= link_to_in_li "Blog", '/blog' %>
+    <% else locale.to_s == "en" %>
+      <%= link_to_in_li "Home", '/' + locale.to_s  %>
+      <li class="collection"><a>Collections<i class="fa fa-sort-desc"></i></a>
+              <ul id="collection-responsive">
+                <%= link_to_in_li "iLamp", '/' + locale.to_s + '/ilamps' %>
+                <%= link_to_in_li "iKids", '/' + locale.to_s + '/ikids' %>
+                <%= link_to_in_li "iCoworking", '/' + locale.to_s + 'icoworking' %>
+                <%= link_to_in_li "iHome", '/' + locale.to_s + 'ihome' %>
+                <%= link_to_in_li "iChristmas", '/' + locale.to_s + 'ichristmas' %>
+                <%= link_to_in_li "iBaby", '/' + locale.to_s + 'ibaby' %>
+              </ul>
+            </li>
+      <%= link_to_in_li "Blog", '/' + locale.to_s + '/blog' %>
+    <% end %>
+  </ul>
+</nav>

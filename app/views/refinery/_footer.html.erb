@@ -1,0 +1,66 @@
+<div class="container">
+  <div class="left">
+    <%= link_to refinery.root_path do %>
+      <%= image_tag "ifurniture-logo2.png", :class => "logo" %>
+    <% end %>
+  </div>
+  <div class="center">
+    <ul class="contact">
+      <li><a href="mailto:hello@ifurniture.pe"><i class="fa fa-envelope"></i> hola@ifurniture.pe</a></li>
+      <li><a href="telf:+5112222222"><%=image_tag "phone.png" %> (01)-2222222</a></li>
+    </ul>
+    <ul class="social-links">
+      <li><a href="https://www.facebook.com/iFurniturePE" target="_blank"><%= image_tag "social/facebook.png" %></a></li>
+      <li><a href="https://twitter.com/iFurniturePE" target="_blank"><%= image_tag "social/twitter.png" %></a></li>
+      <li><a href="https://www.instagram.com/iFurniturePE/" target="_blank"><%= image_tag "social/instagram.png" %></a></li>
+      <li><a href="https://es.pinterest.com/ifurniturepe/" target="_blank"><%= image_tag "social/pinterest.png" %></a></li>
+      <li><a href="https://vimeo.com/ifurniturepe" target="_blank"><%= image_tag "social/vimeo.png" %></a></li>
+      <li><a href="https://www.youtube.com/channel/UCAdumBs-r8tkDrEL34rCKHg" target="_blank"><%= image_tag "social/youtube.png" %></a></li>
+    </ul>
+    <% if locale.to_s == "es" %>
+    <ul class="copyright">
+      <li><%= t('.copyright', :year => Time.now.year, :site_name => ', Interactive Furniture SAC.') %></li>
+      <li>StartUp Perú 2G. Todos los derechos reservados.</li>
+    </ul>
+    <%= link_to "Desarrollado por devAcademy", "https://devacademy.la", :target => "_blank" %>
+    <% else %>
+    <ul class="copyright">
+      <li><%= t('.copyright', :year => Time.now.year, :site_name => ', Interactive Furniture SAC.') %></li>
+      <li>Made in Peru. All rights reserved.</li>
+    </ul>
+    <%= link_to "Develop for devAcademy", "https://devacademy.la", :target => "_blank" %>
+    <% end %>
+  </div>
+  <nav class="right">
+    <ul id="navigation-menu">
+      <% if locale.to_s == "es" %>
+        <%= link_to_in_li "iLamp", '/ilamp' %>
+        <%= link_to_in_li "iKids", '/ikids' %>
+        <%= link_to_in_li "iCoworking", '/icoworking' %>
+        <%= link_to_in_li "iHome", '/ihome' %>
+        <%= link_to_in_li "iBaby", '/ibaby' %>
+        <%= link_to_in_li "iChristmas", '/ichristmas' %>
+      <% else locale.to_s == "en" %>
+        <%= link_to_in_li "iLamp", '/' + locale.to_s + '/ilamp'  %>
+        <%= link_to_in_li "iKids", '/' + locale.to_s + '/ikids'  %>
+        <%= link_to_in_li "iCoworking", '/' + locale.to_s + '/icoworking' %>
+        <%= link_to_in_li "iHome", '/' + locale.to_s + '/ihome' %>
+        <%= link_to_in_li "iBaby", '/' + locale.to_s + '/ibaby' %>
+        <%= link_to_in_li "iChristmas", '/' + locale.to_s + '/ichristmas' %>
+      <% end %>
+    </ul>
+    <div class="fb-like" data-href="https://www.facebook.com/iFurniturePE/" data-layout="button_count" data-action="like" data-show-faces="false" data-share="false"></div>
+    <a href="https://twitter.com/ifurniturePE" class="twitter-follow-button" data-show-count="true" data-show-screen-name="false">Follow @ifurniturePE</a>
+  </nav>
+</div>
+
+<script id="dsq-count-scr" src="//ifurniture.disqus.com/count.js" async></script>
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/es_LA/sdk.js#xfbml=1&version=v2.5";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>

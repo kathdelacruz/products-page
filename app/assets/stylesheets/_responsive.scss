@@ -1,0 +1,278 @@
+@media screen and (max-width: 1240px) {
+  header .container { padding: 0 20px; }
+  section.container { padding: 75px 20px; }
+  section div.container { padding: 75px 20px; }
+}
+@media screen and (max-width: 1024px) {
+  header #navigation-menu li { margin-right: 20px; }
+  .subscription .left input { width: 100%; }
+  .categories article, .products article {
+    .container-overlay, a, .overlay, img { width: 100%; }
+  }
+  .main-video { height: auto; }
+  .register {
+    form {
+      overflow: hidden;
+      input { @include span-columns(4); }
+      input[type="submit"] { width: 31.76157%; }
+    }
+  }
+  .product-description {
+    .left {
+      margin-right: 2%;
+      width: 49%;
+    }
+    .right {
+      width: 49%;
+      img { width: 100%; }
+    }
+  }
+  .maps article img { width: 100%; }
+  footer {
+    .center .contact li { margin-right: 20px;}
+  }
+}
+@media screen and (max-width: 1000px) {
+  .main-video video { display: none; }
+  .main-video { 
+    background-image: url('background-image.jpg');
+    height: 500px;
+  }
+}
+@media screen and (max-width: 768px) {
+  h2, h3 { margin-bottom: 20px; }
+  header {
+    nav { margin-top: 0; }
+    .container { overflow: hidden; }
+    .language { padding-left: 0; }
+    .button-responsive {
+      display: block;
+      height: 40px;
+      width: 50px;
+      float: right;
+      border: none;
+      background: #ffffff;
+      color: $orange;
+      padding: 0;
+      font-size: xx-large;
+    }
+    #navigation-menu {
+      display: none;
+      width: 108px;
+      li {
+        width: 100%;
+        text-align: right;
+        padding-right: 10px;
+        line-height: 25px;
+      }
+      #collection {
+        position: inherit;
+        li {
+          padding: 0;
+          text-align: right;
+        }
+      }
+    }
+  }
+  .main-video video { height: 100%; }
+  .main-video { height: 380px; }
+  section.container { padding: 50px 25px; }
+  .products {
+    .filterProducts ul {
+      margin: 19px auto 0;
+      width: 90%;
+      li { margin-right: 0; }
+    }
+    div article {
+      width: 30%;
+      margin-right: 5%;
+      &:nth-child(2n+4) { margin-right: 5%; }
+      &:nth-child(3n+3) { margin-right: 0; }
+    }
+  }
+  .slides {
+    .slidesjs-container { height: 100px !important; }
+    p { padding: 0 20px; }
+  }
+  .categories article {
+    @include span-columns(6);
+    &:nth-child(2n) { margin-right: 0; }
+  }
+  .team article .horizontal-center { width: 100%; }
+  .team article, .news .post, .news .posts {
+    width: 100%;
+    margin-right: 0;
+    margin-bottom: 40px;
+    &:last-child { margin-bottom: 0; }
+  }
+  .news .post:nth-child(4) { margin-bottom: 20px; }
+  .process { background-repeat: repeat; }
+  .process .container article {
+    width: 49%;
+    margin-right: 2%;
+    &:nth-child(2n+1) { margin-right: 0; }
+    &:nth-child(2n+1):after { display: none; }
+  }
+  .sponsor article {
+    width: 32%;
+    margin-right: 2%;
+    &:nth-child(2n+3) { margin-right: 2%; }
+    &:nth-child(3n+1) { margin-right: 0; }
+  }
+  .register form {
+    input {
+      width: 48%;
+      margin-right: 4%;
+      &:nth-child(2n) { margin-right: 0; }
+    }
+    input[type="submit"] {
+      width: 48%;
+      margin: 0 26%;
+    }
+  }
+  .product-description {
+    .left, .right { width: 100%; }
+    .left .status, .right { margin-top: 30px; }
+    .right img { height: 200px; }
+    .more-images img {
+      margin: 0 2% 15px 0;
+      width: 49%;
+      &:nth-child(2n) { margin-right: 0; }
+    }
+  }
+  .maps {
+    article { 
+      width: 80%;
+      height: auto;
+      margin-bottom: 50px;
+      @include span-columns(12);
+      display: block;
+      float: none;
+      position: relative;
+      &:last-child {
+        position: relative;
+        top: 0;
+        transform: none;
+        margin-bottom: 0;
+      }
+      img {
+        max-width: 80%;
+        height: auto;
+      }
+    }
+  }
+  .new_comment { width: 70%; }
+  .line { margin-bottom: 0; }
+  footer {
+    padding: 30px 20px;
+    .left img { width: 100%; }
+    .center {
+      ul { margin-bottom: 25px; }
+      .contact li {
+        margin-right: 0;
+        width: 100%;
+      }
+      .social-links {
+        overflow: hidden;
+        padding: 0 0 20px;
+        li {
+          margin-right: 3%;
+          margin-bottom: 20px;
+          width: 26%;
+          &:nth-child(3n) { margin-right: 0; }
+        }
+      }
+      .copyright {
+        padding: 0;
+        li:first-child {
+          width: 100%;
+          border-right: none;
+        }
+      }
+      p { margin-top: 0; }
+    }
+    .right ul { float: right; }
+  }
+}
+
+@media screen and (max-width: 480px) {
+  h1 {
+    font-size: 36px;
+    line-height: 42px;
+    width: 90%;
+  }
+  h2 { font-size: 28px; }
+  header {
+    .logo {
+      max-width: 45%;
+      height: auto;
+    }
+    .right { width: 55%; }
+    .nav-responsive { width: 50%; }
+  }
+  section div.container, section.container { padding: 50px 25px; }
+  .slides p { padding: 0; }
+  .category { width: 90%; }
+  .category>img { width: 100%; }
+  .categories article {
+    width: 100%;
+  }
+  .slider { font-size: 18px; }
+  .products div article {
+    width: 100%;
+    margin-right: 0;
+    &:nth-child(2n+4) { margin-right: 0; }
+    &:nth-child(3n+3) { margin-right: 0 }
+  }
+  .main-video { height: 270px; }
+  .team article .description p { display: none; }
+  .social-profiles { margin-top: 20px; }
+  .process article:after { display: none; }
+  .process button { width: 90%;}
+  .register form {
+    input, input[type="submit"] {
+      width: 100%;
+      margin-left: 0;
+      margin-right: 0;
+      &:nth-child(2n) { margin-right: 0; }
+    }
+  }
+  .product-description {
+    .left .status article {
+      width: 100%;
+      &:last-child { margin-top: 20px; }
+    }
+    .more-images img { height: 120px; }
+  }
+  .subscription {
+    input[type="submit"] { max-width: 100%; }
+    .left, textarea {
+      margin-right: 0;
+      width: 100%;
+    }
+  }
+  .new_comment { width: 85%; }
+  #blog_posts { margin-top: 20px; }
+  #blog_post p, #blog_post img { width: 100%; }
+  #comments input, #comments textarea { margin-right: 0; }
+  #comments input[type="submit"] { width: 100%; }
+  .sponsor article {
+    @include span-columns(6);
+    &:nth-child(2n+1) { margin-right:0; }
+  }
+  footer {
+    .left {
+      width: 25%;
+      margin: 0 37.5% 20px;
+    }
+    .center {
+      width: 100%;
+      margin-right: 0;
+      .contact li{
+        display: none;
+        &:last-child { display: block; }
+      }
+    }
+    .right { display: none; }
+  }
+}

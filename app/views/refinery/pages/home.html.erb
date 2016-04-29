@@ -1,0 +1,288 @@
+<% if locale.to_s == 'es' %>
+  <section class="main-video">
+    <h1>Carpintería Digital</h1>
+    <%= video_tag "ifoficial.mp4", :autoplay => true, :loop => true %>
+    <%= image_tag 'background-image.jpg' %>
+  </section>
+  <section class="container slider">
+    <h2>Somos iFurniture</h2>
+    <div class="slides">
+      <p>“Nuestro emprendimiento nace a raíz de contar con una herencia familiar en la industria de la carpintería que se combina con el conocimiento de tecnologías digitales para el diseño de innovación de muebles, sumando todos estos componentes a un conocimiento base, proponemos un híbrido que es iFurniture, mobiliarios innovadores con fabricación digital.”</p>
+      <p>“Somos una empresa moderna, digital de base tecnológica que potencia el diseño y proceso de fabricación de muebles personalizados, flexibles, modulares, transformables, ahorradores de espacio, acercándonos a la robótica para muebles.”</p>
+      <p>“Un enfoque diferente para la fabricación y venta de muebles en el Perú, rápido, efectivo y personalizado, pensando en la necesidad del usuario y en los nuevos espacios innovadores.”</p>
+      <p>"En nuestro proceso de fabricación utilizamos la tecnología CNC (Corte por Control Numérico Computarizado) y la fabricación digital (Fab Lab) con prototipados rápidos en escala real para desarrollar nuevas líneas de diseño."</p>
+      <p>"De la carpintería tradicional a la carpintería digital  generamos un proyecto escalable de alto impacto en la industria de la carpintería del Perú para la venta de productos, servicios e implementación de espacios."</p>
+    </div>
+  </section>
+<% else %>
+  <section class="main-video">
+    <h1>Digital Joinery</h1>
+    <%= video_tag "ifoficial.mp4", :autoplay => true, :loop => true %>
+    <%= image_tag 'background-image.jpg' %>
+  </section>
+  <section class="container slider">
+    <h2>Welcome to iFurniture</h2>
+    <div class="slides">
+      <p>“Our entrepreneurship comes in the wake of having a family heirloom in the woodworking industry combined with the knowledge of digital technologies for innovative furniture design, bringing all these components to a knowledge base, we propose a hybrid that is iFurniture, innovative furniture with digital fabrication.”</p>
+      <p>“We are a modern company, digital technology-based power design and custom manufacturing process of furniture, flexible, modular, transformable, space-saving, approaching robotics modern furniture.”</p>
+      <p>“A different approach to the manufacture and sale of furniture in Peru, fast, effective and personalized, thinking about the need for the user and new innovative spaces.”</p>
+      <p>"In our manufacturing process we use the technology CNC (computer numerical control cutting) and digital fabrication (Fab Lab) with rapid prototyping in real scale to develop new lines of design."</p>
+      <p>"From traditional to digital carpentry we generate a scalable high-impact project in woodworking industry of Peru for the sale of products, services and implementation of spaces."</p>
+    </div>
+  </section>
+<% end %>
+
+<section id="process" class="process">
+  <div class="container">
+    <h2>¿Cómo funciona?</h2>
+    <article>
+      <%= image_tag 'proceso/1.png' %>
+      <h4>Elige</h4>
+      <span>Visita nuestros productos</span>
+    </article>
+    <article>
+      <%= image_tag 'proceso/2.png' %>
+      <h4>Personaliza</h4>
+      <span>Obtén un mueble a tu medida</span>
+    </article>
+    <article>
+      <%= image_tag 'proceso/3.png' %>
+      <h4>Pídelo</h4>
+      <span>Solicita tu producto</span>
+    </article>
+    <article>
+      <%= image_tag 'proceso/4.png' %>
+      <h4>Disfrútalo</h4>
+      <span>Recibe tu mueble a domicilio</span>
+    </article>
+    <a href="#register"><button>¡Comienza ahora!</button></a>
+  </div>
+</section>
+<section class="container categories">
+  <h2>Colecciones</h2>
+  <article>
+    <div class="container-overlay">
+    <% if locale.to_s == 'es' %>
+      <a href="/ilamp">
+    <% else %>
+      <a href="/en/ilamp">
+    <% end %>
+        <div class="overlay"></div>
+        <h3>iLamp</h3>
+        <span>Lámparas paramétricas</span>
+        <div class="info">
+          <i class="fa fa-search-plus"></i>
+        </div>
+        <%= image_tag 'categorias/ilamps.jpg' %>
+      </a>
+    </div>
+  </article>
+  <article>
+    <div class="container-overlay">
+      <% if locale.to_s == 'es' %>
+        <a href="/icoworking">
+      <% else %>
+        <a href="/en/icoworking">
+      <% end %>
+        <div class="overlay"></div>
+        <h3>iCoworking</h3>
+        <span>Mobiliarios para emprendedores</span>
+        <div class="info">
+          <i class="fa fa-search-plus"></i>
+        </div>
+        <%= image_tag 'categorias/icoworking.jpg' %>
+      </a>
+    </div>
+  </article>
+  <article>
+    <div class="container-overlay">
+      <% if locale.to_s == 'es' %>
+        <a href="/ihome">
+      <% else %>
+        <a href="/en/ihome">
+      <% end %>
+        <div class="overlay"></div>
+        <h3>iHome</h3>
+        <span>Rediseña tu casa</span>
+        <div class="info">
+          <i class="fa fa-search-plus"></i>
+        </div>
+        <%= image_tag 'categorias/ihome.jpg' %>
+      </a>
+    </div>
+  </article>
+  <article>
+    <div class="container-overlay">
+      <% if locale.to_s == 'es' %>
+        <a href="/ikids">
+      <% else %>
+        <a href="/en/ikids">
+      <% end %>
+        <div class="overlay"></div>
+        <h3>iKids</h3>
+        <span>Mobiliarios para niños</span>
+        <div class="info">
+          <h3>iKids</h3>
+          <i class="fa fa-search-plus"></i>
+        </div>
+        <%= image_tag 'categorias/ikids.jpg' %>
+      </a>
+    </div>
+  </article>
+  <article>
+    <div class="container-overlay">
+      <% if locale.to_s == 'es' %>
+        <a href="/ibaby">
+      <% else %>
+        <a href="/en/ibaby">
+      <% end %>
+        <div class="overlay"></div>
+        <h3>iBaby</h3>
+        <span>Cunas y accesorios para bebés</span>
+        <div class="info">
+          <i class="fa fa-search-plus"></i>
+        </div>
+        <%= image_tag 'categorias/ikids.jpg' %>
+      </a>
+    </div>
+  </article>
+  <article>
+    <div class="container-overlay">
+      <% if locale.to_s == 'es' %>
+        <a href="/ichristmas">
+      <% else %>
+        <a href="/en/ichristmas">
+      <% end %>
+        <div class="overlay"></div>
+        <h3>iChristmas</h3>
+        <span>Navidad digital</span>
+        <div class="info">
+          <i class="fa fa-search-plus"></i>
+        </div>
+        <%= image_tag 'categorias/ichristmas.jpg' %>
+      </a>
+    </div>
+  </article>
+</section>
+<section class="team">
+  <div class="container">
+    <h2>Equipo</h2>
+    <article>
+      <div class="horizontal-center">
+        <%= image_tag 'equipo/Vane.jpg' %>
+        <div class="description">
+          <span>Vaneza Caycho </span>
+          <p>“Un diseño innovador con tecnología digital puede transformar un espacio volviéndolo creativo e inspirador”</p>
+          <div class="social-profiles">
+            <a href="https://pe.linkedin.com/in/vaneza-caycho-ñuflo-244b8aa3" target="_blank">
+              <span class="fa-stack fa-lg"><i class="fa fa-circle fa-stack-2x"></i><i class="fa fa-linkedin fa-stack-1x fa-inverse"></i></span>
+            </a>
+            <a href="https://twitter.com/vanezadeperu" target="_blank">
+              <span class="fa-stack fa-lg"><i class="fa fa-circle fa-stack-2x"></i><i class="fa fa-twitter fa-stack-1x fa-inverse"></i></span>
+            </a>
+            <a href="mailto:vaneza@ifurniture.pe">
+              <span class="fa-stack fa-lg"><i class="fa fa-circle fa-stack-2x"></i><i class="fa fa-envelope fa-stack-1x fa-inverse"></i></span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </article>
+    <article>
+      <div class="horizontal-center">
+        <%= image_tag 'equipo/Marita.jpg' %>
+        <div class="description">
+          <span>Marita Ccollcca</span>
+          <p>“Contribuimos con la mejora de un producto desde su fabricación industrial hasta su consumo en el mercado”</p>
+          <div class="social-profiles">
+            <a href="https://twitter.com/ifurniturePE" target="_blank">
+              <span class="fa-stack fa-lg"><i class="fa fa-circle fa-stack-2x"></i><i class="fa fa-linkedin fa-stack-1x fa-inverse"></i></span>
+            </a>
+            <a href="https://twitter.com/ifurniturePE" target="_blank">
+              <span class="fa-stack fa-lg"><i class="fa fa-circle fa-stack-2x"></i><i class="fa fa-twitter fa-stack-1x fa-inverse"></i></span>
+            </a>
+            <a href="mailto:marita@ifurniture.pe">
+              <span class="fa-stack fa-lg"><i class="fa fa-circle fa-stack-2x"></i><i class="fa fa-envelope fa-stack-1x fa-inverse"></i></span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </article>
+  </div>
+</section>
+<section class="container news">
+  <h2>Noticias</h2>
+  <% @posts.each do |post| %>
+    <% if post.live? %>
+      <%= link_to refinery.blog_post_path(post), :class => "post" do %>
+        <article class="blog_post" id="<%= dom_id(post) %>">
+          <h4 class="title"><%= post.title %></h4>
+          <%= post.custom_teaser.html_safe %>
+        </article>
+      <% end %>
+    <% end %>
+  <% end %>
+</section>
+<section class="sponsor">
+  <div class="container">
+    <h2>Nuestros aliados</h2>
+    <article>
+      <%= image_tag 'auspiciadores/fablab.png' %>
+    </article>
+    <article>
+      <%= image_tag 'auspiciadores/starupperu.png' %>
+    </article>
+    <article>
+      <%= image_tag 'auspiciadores/cisanmarcos.png' %>
+    </article>
+    <article>
+      <%= image_tag 'auspiciadores/equipu.png' %>
+    </article>
+    <article>
+      <%= image_tag 'auspiciadores/fablabtecsup.png' %>
+    </article>
+    <article>
+      <%= image_tag 'auspiciadores/dev.png' %>
+    </article>
+    <article>
+      <%= image_tag 'auspiciadores/utec.png' %>
+    </article>
+    <article>
+      <%= image_tag 'auspiciadores/starscamp.png' %>
+    </article>
+  </div>
+</section>
+<section id="register" class="container subscription">
+  <% if locale.to_s == 'es' %>
+    <h2>Pedidos y consultas</h2>
+    <article class="contact">
+      <%= form_tag '/suscribir', target: "_top" do %>
+      <div class="left">
+        <%= hidden_field_tag :group_name, 'suscriptores' %>
+        <%= hidden_field_tag :group, 'home' %>
+        <%= text_field_tag :first_name, nil, type: "text", placeholder: "Nombre" %>
+        <%= text_field_tag :email, nil, type: "email", placeholder: "Email", pattern: "[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$", required: true %>
+        <%= text_field_tag :phone, nil, type: "text", placeholder: "Teléfono" %>
+        <%= text_field_tag :city, nil, type: "text", placeholder: "Ciudad" %>
+      </div>
+      <%= text_area_tag :comment, nil, type: "text", placeholder: "Mensaje", maxlength: 255 %>
+      <%= submit_tag "Enviar" %>
+      <% end %>
+    </article>
+  <% else %>
+    <h2>Register for more information</h2>
+    <article class="contact">
+      <%= form_tag '/suscribir', target: "_top" do %>
+      <div class="left">
+        <%= hidden_field_tag :group_name, 'suscriptores' %>
+        <%= hidden_field_tag :group, 'home' %>
+        <%= text_field_tag :first_name, nil, type: "text", placeholder: "Name" %>
+        <%= text_field_tag :email, nil, type: "email", placeholder: "Email", pattern: "[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$", required: true %>
+        <%= text_field_tag :phone, nil, type: "text", placeholder: "Phone" %>
+        <%= text_field_tag :city, nil, type: "text", placeholder: "City" %>
+      </div>
+      <%= text_area_tag :comment, nil, type: "text", placeholder: "Message", maxlength: 255 %>
+      <%= submit_tag "Submit" %>
+      <% end %>
+    </article>
+  <% end %>
+</section>
